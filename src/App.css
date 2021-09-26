@@ -12,6 +12,10 @@
   margin: 5px;
   padding: 5px;
 }
+.active {
+  background: tomato;
+  text-decoration: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
