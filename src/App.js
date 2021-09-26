@@ -1,3 +1,6 @@
+/* 생활코딩 React 리액트 프로그래밍
+   1부 React.js 기초내용 내용 */
+
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';

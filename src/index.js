@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import App2 from './App2';
+import AppClassVsFunc from './AppClassVsFunc';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App2 />
-    <App />
+    <AppClassVsFunc /> {/* 2부 클래스 스타일 vs. 함수 스타일 편(hook 포함) 강의 내용 */}
+    <App /> {/* 1부 React.js 기초 강의 내용 */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,9 +1,11 @@
 /* 2부 리액트 클래스 스타일 vs. 함수 스타일 편 (hook 포함) 2021.09.26 실습
+ 1. 스테이트(state), props 사용 실습
+ 2. 라이프 사이클 (life cycle) 실습 - https://gseok.gitbooks.io/react/content/bd80-bd84-bd80-bd84-c9c0-c2dd-b4e4/react-component-lifecycle-api-c815-b9ac.html
  -  https://youtube.com/playlist?list=PLuHgQVnccGMCEfBwnNGsJCQDiqSWI-edj */
 import './App.css';
 import { Component, useState } from 'react';
 
-function App2() {
+function AppClassVsFunc() {
   return (
     <div className="container">
       <h1>Xena</h1>
@@ -16,6 +18,7 @@ function App2() {
 
 function FuncComp(props) {
   // 1. 스테이트의 값을 초기화 세팅 (스테이트 만들기?). 2개의 원소를 가진 배열 리턴함.
+  // 내장 훅은 useXXX() 이런 식으로 시작됨. useState() 리액트에서 제공하는 Hook 임.
   let numberState = useState(props.initNumber);
   console.log('numberState', numberState);
 
@@ -89,4 +92,4 @@ class ClassComp extends Component {
   }
 }
 
-export default App2;
+export default AppClassVsFunc;
