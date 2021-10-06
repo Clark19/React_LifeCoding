@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './App';
 import AppClassVsFunc from './AppClassVsFunc';
 import AppRouterDOM from './AppRouterDOM';
 import {BrowserRouter} from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
+import AppAjax from './AppAjax';
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppAjax />
     {/* 웹 서버 설정 잘 바꿔서 어떤 path 로 들어오든 간에 루트 페이지(폴더?)에 있는
        html을 서비스 할 수 있다면 <BrowserRouter> 사용하면 됨.
        그게 안되면 <HashRouter>를 사용하면 됨. 대신 이거 사용하며 
