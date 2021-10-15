@@ -1,8 +1,6 @@
-/* 3부 React Router DOM 2021.09.26 실습
+/* 생활코딩 리액트 프로그래밍 3부 React Router DOM 2021.09.26 실습
  */
-import './App.css';
-import { Component, useState } from 'react';
-import {Route, Switch, Link, NavLink, useParams} from 'react-router-dom';
+import {Route, Switch, NavLink, useParams} from 'react-router-dom';
 
 function Home() {
   return (
@@ -86,13 +84,16 @@ function AppRouterDOM() {
       <h1>Hello React Router DOM Example</h1>
 
       <ul>
-        {/* <NavLink> 네비게이션과 유사함. <Link>에 기능을 조금 더한거. */}
+        {/* <NavLink>는 <Link>에 기능을 조금 더한거. 주로 메뉴(네비게이션) 용도로 사용.
+            <a> 태그를 대체하고, a 태그의 href 속성을 to로 바꾸면 됨.
+        */}
         <li><NavLink exact to="/">Home</NavLink></li>
         <li><NavLink to="/topics">Topics</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
 
-      {/* Switch, exact를 사용하고 아래 순서로 콤포넌트를 배열해야 제대로 작동하면서, 이상한 URL로 접근시 'Not Found' 페이지 띄워주기 수월하다  */}
+      {/* Switch, exact를 사용하고 아래 순서로 콤포넌트를 배열해야 제대로 작동하면서,
+         이상한 URL로 접근시 'Not Found' 페이지 띄워주기 수월하다. */}
       <Switch>
         <Route exact path="/"><Home></Home></Route>
         <Route path="/topics"><Topics></Topics></Route>
