@@ -14,7 +14,15 @@ class ClassComp extends React.Component {
     this.setState(cur => {
       return {count: cur.count+1};
     });
+
+    // 비동기 콜을 위한 테스트 코드
+    setTimeout(()=>console.log('111'), 0)
+    console.log('222')
+    for (let i=0; i<800; i++) {
+      console.log('333');
+    }
   }
+
 
   render() {
     return (
